@@ -4,15 +4,18 @@
 #
 Name     : mvn-htrace
 Version  : 3.0.4
-Release  : 3
+Release  : 4
 URL      : https://repo1.maven.org/maven2/org/htrace/htrace-core/3.0.4/htrace-core-3.0.4.jar
 Source0  : https://repo1.maven.org/maven2/org/htrace/htrace-core/3.0.4/htrace-core-3.0.4.jar
 Source1  : https://repo.maven.apache.org/maven2/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar
 Source2  : https://repo.maven.apache.org/maven2/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.pom
-Source3  : https://repo1.maven.org/maven2/org/apache/htrace/htrace-core4/4.0.1-incubating/htrace-core4-4.0.1-incubating.pom
-Source4  : https://repo1.maven.org/maven2/org/apache/htrace/htrace/4.0.1-incubating/htrace-4.0.1-incubating.pom
-Source5  : https://repo1.maven.org/maven2/org/apache/htrace/htrace/4.1.0-incubating/htrace-4.1.0-incubating.pom
-Source6  : https://repo1.maven.org/maven2/org/htrace/htrace-core/3.0.4/htrace-core-3.0.4.pom
+Source3  : https://repo1.maven.org/maven2/org/apache/htrace/htrace-core/3.1.0-incubating/htrace-core-3.1.0-incubating.jar
+Source4  : https://repo1.maven.org/maven2/org/apache/htrace/htrace-core/3.1.0-incubating/htrace-core-3.1.0-incubating.pom
+Source5  : https://repo1.maven.org/maven2/org/apache/htrace/htrace-core4/4.0.1-incubating/htrace-core4-4.0.1-incubating.pom
+Source6  : https://repo1.maven.org/maven2/org/apache/htrace/htrace/3.1.0-incubating/htrace-3.1.0-incubating.pom
+Source7  : https://repo1.maven.org/maven2/org/apache/htrace/htrace/4.0.1-incubating/htrace-4.0.1-incubating.pom
+Source8  : https://repo1.maven.org/maven2/org/apache/htrace/htrace/4.1.0-incubating/htrace-4.1.0-incubating.pom
+Source9  : https://repo1.maven.org/maven2/org/htrace/htrace-core/3.0.4/htrace-core-3.0.4.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -43,17 +46,26 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache/htrace/htrac
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/htrace/htrace-core/3.1.0-incubating
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/htrace/htrace-core/3.1.0-incubating/htrace-core-3.1.0-incubating.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/htrace/htrace-core/3.1.0-incubating
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/apache/htrace/htrace-core/3.1.0-incubating/htrace-core-3.1.0-incubating.pom
+
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/htrace/htrace-core4/4.0.1-incubating
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/apache/htrace/htrace-core4/4.0.1-incubating/htrace-core4-4.0.1-incubating.pom
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/apache/htrace/htrace-core4/4.0.1-incubating/htrace-core4-4.0.1-incubating.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/htrace/htrace/3.1.0-incubating
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/apache/htrace/htrace/3.1.0-incubating/htrace-3.1.0-incubating.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/htrace/htrace/4.0.1-incubating
-cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/apache/htrace/htrace/4.0.1-incubating/htrace-4.0.1-incubating.pom
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/org/apache/htrace/htrace/4.0.1-incubating/htrace-4.0.1-incubating.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/htrace/htrace/4.1.0-incubating
-cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/org/apache/htrace/htrace/4.1.0-incubating/htrace-4.1.0-incubating.pom
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/org/apache/htrace/htrace/4.1.0-incubating/htrace-4.1.0-incubating.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/htrace/htrace-core/3.0.4
-cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/htrace/htrace-core/3.0.4/htrace-core-3.0.4.pom
+cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/org/htrace/htrace-core/3.0.4/htrace-core-3.0.4.pom
 
 
 %files
@@ -61,9 +73,12 @@ cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/org/htrace/htrace-core/
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/org/apache/htrace/htrace-core/3.1.0-incubating/htrace-core-3.1.0-incubating.jar
+/usr/share/java/.m2/repository/org/apache/htrace/htrace-core/3.1.0-incubating/htrace-core-3.1.0-incubating.pom
 /usr/share/java/.m2/repository/org/apache/htrace/htrace-core4/4.0.1-incubating/htrace-core4-4.0.1-incubating.pom
 /usr/share/java/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.jar
 /usr/share/java/.m2/repository/org/apache/htrace/htrace-core4/4.1.0-incubating/htrace-core4-4.1.0-incubating.pom
+/usr/share/java/.m2/repository/org/apache/htrace/htrace/3.1.0-incubating/htrace-3.1.0-incubating.pom
 /usr/share/java/.m2/repository/org/apache/htrace/htrace/4.0.1-incubating/htrace-4.0.1-incubating.pom
 /usr/share/java/.m2/repository/org/apache/htrace/htrace/4.1.0-incubating/htrace-4.1.0-incubating.pom
 /usr/share/java/.m2/repository/org/htrace/htrace-core/3.0.4/htrace-core-3.0.4.jar
