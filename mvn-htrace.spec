@@ -4,7 +4,7 @@
 #
 Name     : mvn-htrace
 Version  : 3.0.4
-Release  : 5
+Release  : 6
 URL      : https://repo1.maven.org/maven2/org/htrace/htrace-core/3.0.4/htrace-core-3.0.4.jar
 Source0  : https://repo1.maven.org/maven2/org/htrace/htrace-core/3.0.4/htrace-core-3.0.4.jar
 Source1  : https://repo.maven.apache.org/maven2/org/apache/htrace/htrace-core4/4.0.1-incubating/htrace-core4-4.0.1-incubating.jar
